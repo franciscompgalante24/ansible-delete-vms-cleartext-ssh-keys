@@ -1,0 +1,6 @@
+---
+- name: Copy file to delete cleartext SSH private keys
+  ansible.builtin.include_tasks: copy_logout_delete_file.yml
+
+- name: Prepare deletion of cleartext SSH private keys on Target Host
+  ansible.builtin.include_tasks: delete_cleartext_ssh_keys.yml

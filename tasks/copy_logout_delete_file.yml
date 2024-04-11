@@ -1,0 +1,13 @@
+---
+- name: Clean and Copy {{ deletion_file }} files on Target Host
+  become: true
+  block:
+    - name: Clean logout_delete.sh file on target host
+      ansible.builtin.file:
+        path: '{{ working_directory }}/{{ deletion_file }}'
+        state: absent
+
+    - name: Copy {{ deletion_file }} repo to target host
+      ansible.builtin.copy:
+        src: '{{ deletion_file }}'
+        dest: '{{ working_directory }}/'

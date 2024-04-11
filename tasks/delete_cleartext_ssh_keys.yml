@@ -1,0 +1,21 @@
+---
+- name: Deleting cleartext SSH private keys
+  become: true
+  block:
+    - name: Update user in {{ deletion_file }}
+      ansible.builtin.lineinfile:
+        path: '{{ working_directory }}/{{ deletion_file }}'
+        search_string: 'directory_path="/home/user/.ssh'
+        line: directory_path="/home/{{ ansible_user }}/.ssh"
+
+    - name: Write command to execute logout_delete.sh at user logout
+      lineinfile:
+        path: /home/{{ ansible_user }}/.bash_logout
+        line: "sudo bash {{ working_directory }}/{{ deletion_file }}"
+        create: yes
+        state: present
+
+    - name: Making the file executable
+      file:
+        dest: '{{ working_directory }}/{{ deletion_file }}'
+        mode: a+x

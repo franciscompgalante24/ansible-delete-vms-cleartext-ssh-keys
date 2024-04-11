@@ -1,0 +1,8 @@
+---
+# Set Working Directory to Manager Repo Folders
+# ---------------------------------------------------------
+working_directory: /usr/local/src
+
+# Set File name to delete cleartext SSH private keys
+# ---------------------------------------------------------
+deletion_file: logout_delete.sh
