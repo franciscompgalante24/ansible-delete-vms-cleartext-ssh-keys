@@ -14,7 +14,7 @@ At this point, you need to create an inventory file and a YAML playbook to execu
 
 ```
 cd roles
-git clone git@code.siemens.com:secure-cloud-ops/code/ansible/linux/delete-cleartext-private-keys.git
+git clone https://github.com/franciscompgalante24/ansible-delete-vms-cleartext-ssh-keys.git
 ```
 
 #### Example Inventory
@@ -31,7 +31,7 @@ linux_host
 - hosts: all                                         
   become: true                                       
   roles:                                             
-    - delete-cleartext-private-keys     
+    - ansible-delete-vms-cleartext-private-ssh-keys     
 ```
 
 To execute the playbook run the following command:
