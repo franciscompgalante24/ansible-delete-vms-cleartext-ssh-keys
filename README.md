@@ -39,9 +39,5 @@ To execute the playbook run the following command:
 ansible-playbook -i inventory delete-cleartext-private-keys.yml -b -K
 ```
 
-## License
-Siemens Inner Source License v1.3
-
 ## Author Information
-- Gonçalo Manuel Batista Torres de Castro (DI IT EH PT 4)
-- Francisco Mansilha Pena Galante (DI IT EH PT 4 2)
+- Francisco Mansilha Pena Galante
