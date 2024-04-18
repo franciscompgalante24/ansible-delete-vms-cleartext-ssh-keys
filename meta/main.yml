@@ -1,14 +1,12 @@
 galaxy_info:
   author: Francisco Mansilha Pena Galante
   namespace: role
-  description: "Ansible Role that covers covers the deletion of cleartext SSH private keys."
-  company: Siemens
+  description: "Ansible Role that covers the deletion of cleartext virtual machines' SSH private keys."
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
 
-  license: Siemens Inner Source License v1.3
   min_ansible_version: "2.13.7"
 
   # Provide a list of supported platforms, and for each platform a list of versions.
